@@ -67,6 +67,7 @@ if ($searchResult.Updates.Count -gt 0) {
 
         # Check if installation was successful
         if ($installationResult.ResultCode -eq 2) {
+            # Count is not working, this needs to be fixed, it keeps reporting 0 i think .count is not correct. 
             Write-TimestampedVerbose ("Number of updates successfully installed: {0}" -f $installationResult.updates.Count)
         } else {
             Write-TimestampedVerbose "Installation of some updates failed."
